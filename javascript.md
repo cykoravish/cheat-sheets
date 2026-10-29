@@ -14,7 +14,7 @@ These answers are written the way you can say them out loud in an interview. Sho
 
 **What is the Temporal Dead Zone?** when we try to access let and const before its declaration that time is known as temporal dead zone. If you use the variable in this time, you get a `ReferenceError`.
 
-**What is scope and lexical scope?** Scope decides where a variable can be used. Lexical scope means a function can use the variables from the place where it was written, not from the place where it was called. JavaScript looks for a variable in the current scope first, then in the outer scopes, one by one.
+**What is scope and lexical scope?** Scope decides where a variable can be accessed. Lexical scope means a function has access to variables from its own scope and its outer (parent) scopes based on where it is defined. JavaScript looks for a variable in the current scope first, then in the outer scopes, one by one.
 
 **What is a closure?** A closure is when an inner function remembers the variables of its outer function, even after the outer function has finished.
 
