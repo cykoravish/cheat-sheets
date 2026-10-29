@@ -39,10 +39,11 @@ We use closures for data privacy, memoization, currying, and event handlers.
 - Arrow function: it has no `this` of its own. It uses the `this` from the outer scope.
 
 **What is the difference between call, apply and bind?**
+call(), apply() and bind() are javaScript methods used to control the value of this inside a function.
 
-- `call` runs the function right now. You pass arguments one by one.
-- `apply` runs the function right now. You pass arguments in an array.
-- `bind` does not run the function. It returns a new function with `this` fixed, which you can call later.
+- `call` runs the function immediately. You pass arguments one by one.
+- `apply` runs the function immediately. You pass arguments in an array.
+- `bind` does not run the function immediately. It returns a new function with `this` fixed, which you can call later.
 
 **What is the difference between == and ===?** `==` converts the types before comparing, so `'5' == 5` is true. `===` checks both type and value, so `'5' === 5` is false. I always use `===` to avoid surprises.
 
