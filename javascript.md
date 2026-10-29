@@ -12,7 +12,7 @@ These answers are written the way you can say them out loud in an interview. Sho
 - `let` is block-scoped. It cannot be redeclared in the same scope.
 - `const` is block-scoped and cannot be reassigned. But if it holds an object or an array, the inside of it can still change.
 
-**What is the Temporal Dead Zone?** It is the time between the start of a block and the line where a `let` or `const` variable is declared. If you use the variable in this time, you get a `ReferenceError`.
+**What is the Temporal Dead Zone?** when we try to access let and const before its declaration that time is known as temporal dead zone. If you use the variable in this time, you get a `ReferenceError`.
 
 **What is scope and lexical scope?** Scope decides where a variable can be used. Lexical scope means a function can use the variables from the place where it was written, not from the place where it was called. JavaScript looks for a variable in the current scope first, then in the outer scopes, one by one.
 
