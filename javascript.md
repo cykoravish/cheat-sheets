@@ -77,7 +77,7 @@ call(), apply() and bind() are javaScript methods used to control the value of t
 
 **What is a pure function?** A function that always gives the same output for the same input, and has no side effects. It does not change anything outside itself. Pure functions are easy to test.
 
-**What is currying?** Turning a function with many arguments into a chain of functions that take one argument each, like `add(1)(2)(3)`.
+**What is currying?** Currying is the process of converting a function with multiple arguments into a series of functions, each accepting one argument. `add(1)(2)(3)`.
 
 **What is memoization?** Saving the result of an expensive function call, so that if we call it again with the same input, we return the saved result.
 
