@@ -61,7 +61,7 @@ call(), apply() and bind() are javaScript methods used to control the value of t
 
 **What are the ways to create an object?** Object literal `{}`, `new Object()`, a constructor function with `new`, `Object.create(proto)`, and ES6 `class`.
 
-**What is an ES6 class?** It is a cleaner syntax on top of prototype-based inheritance. We use `extends` to inherit and `super()` to call the parent constructor. In a child class, `super()` must be called before using `this`.
+**What is an ES6 class?** An ES6 class is a blueprint for creating objects in JavaScript.
 
 **What is the difference between Object.freeze, Object.seal and const?**
 
