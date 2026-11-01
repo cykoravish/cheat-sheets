@@ -148,7 +148,7 @@ const [a, b] = [1, 2];
 [a, b] = [b, a];                    // swap
 ```
 
-**What is the difference between spread and rest?** Spread (`...`) opens a collection into separate items: `[...arr]`, `{...obj}`. Rest (`...args`) gathers many items into one array. Rest is used in function parameters and must be last.
+**What is the difference between spread and rest?** Spread expands elements of an array or properties of an object, whereas Rest collects multiple values into a single array or object
 
 **What are template literals?** Strings written with backticks. They support `${expression}` inside the string and can span many lines.
 
@@ -156,7 +156,9 @@ const [a, b] = [1, 2];
 
 **What is the difference between for...of and for...in?** `for...of` loops over the **values** of an iterable (array, string, Map, Set). `for...in` loops over the **keys** of an object. Do not use `for...in` on arrays.
 
-**What is the difference between Map and Object?** A Map can use any type as a key, keeps the insertion order, has a `size` property, and works better when we add and remove items often. An Object only uses strings or symbols as keys.
+**What is the difference between Map and Object?** Object: An Object is a collection of key-value pairs where keys are strings or Symbols.
+
+Map: A Map is a collection of key-value pairs where keys can be of any data type and insertion order is maintained.
 
 **What is a Set?** A collection of unique values. To remove duplicates from an array: `[...new Set(arr)]`.
 
