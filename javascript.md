@@ -79,7 +79,7 @@ call(), apply() and bind() are javaScript methods used to control the value of t
 
 **What is currying?** Currying is the process of converting a function with multiple arguments into a series of functions, each accepting one argument. `add(1)(2)(3)`.
 
-**What is memoization?** Saving the result of an expensive function call, so that if we call it again with the same input, we return the saved result.
+**What is memoization?** Memoization is an optimization technique in JavaScript where we store the results of expensive function calls and reuse them when the same inputs occur again.
 
 **What is an IIFE?** It is a function that runs as soon as it is defined: `(function(){ ... })();`. It is used to create a private scope.
 
@@ -87,7 +87,7 @@ call(), apply() and bind() are javaScript methods used to control the value of t
 
 ## 4. Async JavaScript (asked the most)
 
-**JavaScript is single-threaded. How does it do async work?** JavaScript has one call stack. Slow tasks like timers and network calls are handled by the browser (or Node.js) in the background. When they finish, their callbacks wait in a queue. The **event loop** keeps checking: if the call stack is empty, it moves the next callback from the queue to the stack.
+**JavaScript is single-threaded. How does it do async work?** JavaScript is single-threaded, meaning it executes one piece of JavaScript code at a time. It handles asynchronous operations using the runtime APIs, callback queues, and the Event Loop. The Event Loop coordinates when callbacks can execute after the call stack becomes empty. Promise callbacks are processed before timer callbacks because microtasks have priority over tasks.
 
 **What is the order of the event loop?**
 
@@ -104,6 +104,22 @@ console.log('4');
 ```
 
 **What is callback hell?** When callbacks are nested inside callbacks many times, the code becomes hard to read and maintain. We fix it with Promises or async/await.
+
+```
+setTimeout(() => {
+    console.log("First");
+
+    setTimeout(() => {
+        console.log("Second");
+
+        setTimeout(() => {
+            console.log("Third");
+        }, 1000);
+
+    }, 1000);
+
+}, 1000);
+```
 
 **What are the states of a Promise?** A Promise starts as `pending`. Then it becomes `fulfilled` (success) or `rejected` (failure). Once it is settled, the state never changes.
 
